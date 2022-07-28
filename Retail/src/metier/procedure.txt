@@ -1,0 +1,5 @@
+create procedure insertValues (p_nom IN Produit.nom%TYPE, p_prix IN Produit.PRIXUNITAIREHT%TYPE, p_qte IN Produit.QUANTITESTOCK%TYPE) IS
+    BEGIN
+        insert into Produit (id,nom, PRIXUNITAIREHT, QUANTITESTOCK)
+        values(autoincrement.nextval,p_nom,p_prix,p_qte);
+    END;
